@@ -2,13 +2,14 @@
 /**
  * frint - display char range
  * @begin: beginning range
- * @accept: accept 
+ * @accept: accept
  * @end: end
  * Return: byte returned
  */
 int frint(char *begin, char *end, char *accept)
 {
 	int add = 0;
+
 	while (begin <= end)
 	{
 		if (begin != accept)

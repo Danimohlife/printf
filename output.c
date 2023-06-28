@@ -9,6 +9,7 @@ int display_str(va_list ap, arg_t *user)
 {
 	char len_str = ' ';
 	unsigned int len = 1, add = 0, ch = va_arg(ap, int);
+
 	if (user->fifth_flag)
 		add = add + _putchar(ch);
 	while (len++ < user->radius)
@@ -26,6 +27,7 @@ int display_str(va_list ap, arg_t *user)
 int show_number(va_list ap, arg_t *user)
 {
 	long i;
+
 	if (user->last_flag)
 		i = va_arg(ap, long);
 	else if (user->height_mode)

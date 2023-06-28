@@ -10,6 +10,7 @@ int lower_h(va_list ap, arg_t *user)
 	unsigned long i;
 	int a = 0;
 	char *string;
+
 	if (user->last_flag)
 		i = (unsigned long)va_arg(ap, unsigned long);
 	else if (user->)
@@ -36,6 +37,7 @@ int upper_h(va_list ap, arg_t *user)
 	unsigned long i;
 	int a = 0;
 	char *string;
+
 	if (user->last_flag)
 		i = (unsigned long)va_arg(ap, unsigned long);
 	else if (user->height_mode)
