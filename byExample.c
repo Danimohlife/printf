@@ -9,7 +9,7 @@
 char *converter(long int a, int b, int f)
 {
 	static char *of_arr, base[50];
-	char str_si = 0, *pstd
+	char str_si = 0, *pstd;
 	unsigned long num;
 
 	num = a;
@@ -24,7 +24,7 @@ char *converter(long int a, int b, int f)
 	*pstd = '\0';
 
 	do	{
-		*--pstd = of_arr[n % b];
+		*--pstd = of_arr[num % b];
 		num /= b;
 	} while (num != 0);
 
@@ -49,7 +49,8 @@ int unsigned_num(va_list p, arg_t *op)
 	else
 		nlp = (unsigned int)va_arg(p, unsigned int);
 	op->unsign = 1;
-	return (display_numb(converter(l, 10, UNSIGNED_CON, op), op));
+
+	return (display_numb(converter(nlp, 10, UNSIGNED_CON, op), *op));
 }
 /**
  * _address_of - an address
@@ -57,7 +58,7 @@ int unsigned_num(va_list p, arg_t *op)
  * @pr: the struct
  * Return: byte
  */
-int _address_of(va_list p, params_t *pr)
+int _address_of(va_list p, arg_t *pr)
 {
 	unsigned long int i = va_arg(p, unsigned long int);
 	char *string;

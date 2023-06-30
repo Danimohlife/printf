@@ -25,28 +25,17 @@ void callstruct(arg_t *struc)
  */
 int _putchar(int ch)
 {
-	static char fubb[BUFF_SIZE];
-	static int loop;
-
-	if (ch == BUFF || loop >= BUFF_SIZE)
-	{
-		write(1, fubb, loop);
-		loop = 0;
-	}
-	if (ch != BUFF)
-		fubb[loop++] = ch;
-	return (1);
+	return (write(1, &ch, 1));
 }
 /**
  * _puts - output a str along newline
  * @b: the string out vari
  * Return: string
  */
-int _puts(char *b)
+void _puts(char *b)
 {
-	char *c = b;
 
-	while (*b)
+	while (*b != '\0')
 		_putchar(*b++);
-	return (b - a);
+	_putchar('\');
 }
