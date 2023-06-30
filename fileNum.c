@@ -25,6 +25,7 @@ int (*func_ptr(char *t))(va_list ap, arg_t *user)
 	};
 
 	int a;
+
 	for (a = 0; function[a].string; a++)
 	{
 		if (*t == function[a].string[0])
