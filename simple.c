@@ -20,14 +20,14 @@ int frint(char *begin, char *end, char *accept)
 }
 /**
  * string_rev - display string in reverse order
- * @ch: input string
+ * @ap: input string
  * @user: the struct par
  * Return: bytes returned
  */
-int string_rev(va_list ch, arg_t *user)
+int string_rev(va_list ap, arg_t *user)
 {
 	int fin, add = 0;
-	char *string = va_arg(ch, char *);
+	char *string = va_arg(ap, char *);
 	(void)user;
 	if (string)
 	{
@@ -41,16 +41,16 @@ int string_rev(va_list ch, arg_t *user)
 }
 /**
  * string_rot - display string in rot
- * @ch: input string
+ * @ap: input string
  * @user: the argument
  * Return: bytes returned
  */
-int string_rot(va_list ch, arg_t *user)
+int string_rot(va_list ap, arg_t *user)
 {
 	int k, index;
 	int loop = 0;
 	char array[] = "NOPQRSTUVWXYZABCDEFGHIJKLM      nopqrstuvwxyzabcdefghijklm";
-	char *c = va_arg(ch, char *);
+	char *c = va_arg(ap, char *);
 	(void)user;
 	k = 0;
 	index = 0;

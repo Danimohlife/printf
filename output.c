@@ -39,7 +39,7 @@ int show_number(va_list ap, arg_t *user)
 /**
  * str_print - output string
  * @ap: argument pointer
- * @user: the argument 
+ * @user: the argument
  * Return: string returned
  */
 int str_print(va_list ap, arg_t *user)
