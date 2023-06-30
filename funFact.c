@@ -11,6 +11,7 @@ int _printf(const char *format, ...)
 	int add = 0;
 
 	arg_t user = PRINT_STARTER;
+
 	va_start(ap, format);
 
 	if ((format[0] == '%' && !format[1]) || !format)
